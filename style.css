@@ -1,0 +1,51 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrolling */
+    
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding:0;
+    margin:0;
+}
+.main-content video {
+    max-width: 80%; /* Default max width */
+    max-height: 80%; /* Default max height */
+}
+.footer {
+    flex-shrink: 0; /* Ensure the footer doesn't shrink too much */
+}
+header {
+    flex-shrink: 0; /* Ensure the header doesn't shrink too much */
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .main-content video {
+        max-width: 70%; /* Reduce max width on smaller screens */
+        max-height: 70%; /* Reduce max height on smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .main-content video {
+        max-width: 60%; /* Further reduce max width on very small screens */
+        max-height: 60%; /* Further reduce max height on very small screens */
+    }
+}
